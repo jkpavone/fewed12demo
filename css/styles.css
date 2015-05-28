@@ -1,0 +1,597 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+ 
+  font-family: Georgia, serif;
+  line-height: 18px; /*1.5*/
+  color: black;   
+  font-size: 12px; /*16px;*/
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+/*------------------------------*\
+    Grid System
+\*------------------------------*/
+
+/*img {
+  width: 100%;
+}*/
+
+.column-1 {
+    width: 6.86666666667%;
+}
+
+.column-2 {
+    width: 15.3333333333%;
+}
+
+.column-3 {
+    width: 23.8%;
+}
+
+.column-4 {
+    width: 32.2666666667%;
+}
+
+.column-5 {
+    width: 40.7333333333%;
+}
+
+.column-6 {
+    width: 49.2%;
+}
+
+.column-7 {
+    width: 57.6666666667%;
+}
+
+.column-8 {
+    width: 66.1333333333%;
+}
+
+.column-9 {
+    width: 74.6%;
+}
+
+.column-10 {
+    width: 83.0666666667%;
+}
+
+.column-11 {
+    width: 91.5333333333%;
+}
+
+.column-12 {
+    width: 100%;
+    margin-left: 0;
+}
+
+
+
+.column {
+    padding: 5px;
+    min-height: 30px;
+    float: left;
+} /* this float makes it possible to have multiple adjacent 
+columns */
+
+.row {
+    margin-bottom: 10px;
+    clear: both;
+   /* overflow: auto;*/
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+
+/*------------------------------*\
+    End of Grid System
+\*------------------------------*/
+
+
+
+/*------------------------------*\
+   Start of CSS Parallax
+\*------------------------------*/
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*do i need these two styles above?*/
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax-1 {
+  background-image: url("../images/1920.jpg");
+}
+
+section.module.parallax-2 {
+  background-image: url("../images/1920.jpg");
+  /*margin-top: 1000px;*/
+}
+
+section.module.parallax-3{
+  background-image: url("../images/indianajones.jpg");
+
+}
+/*------------------------------*\  
+    end of CSS parallax
+\*------------------------------*/
+
+
+
+/*------------------------------*\
+    start of jquery fly in
+\*------------------------------*/
+
+.fly {
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+  transform: translateY(100px) scale(1.05) translate3d(0, 0, 0);
+}
+
+.show-block {
+opacity: 1;
+transform: translateY(0) scale(1) translate3d(0, 0, 0);
+}
+
+
+
+/*------------------------------*\
+    End of Jquery fly in
+\*------------------------------*/
+
+
+
+/* ============================================================
+  Start of my styles
+============================================================ */
+
+
+ ol,ul {
+    list-style: none;
+  }
+
+a {
+  text-decoration: none;
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%; /* are auto and 100% same thing */
+  height: 50px;
+  background-color: #FDFDFD;
+  color: black;
+/*  padding-left: 60px;*/
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19) , 3px 0 3px 0 rgba(0,0,0,0.19) , 0 3px 3px 0 rgba(0,0,0,0.23);
+}
+   
+
+
+
+.fixed-nav-bar ul li {
+display: inline-block;
+/*text-align: left;*/
+padding:  0 20px 0 10px;
+color: black;
+margin-top: 6px;
+  }
+
+/* unvisited link */
+.fixed-nav-bar ul li a:link {
+   text-decoration:none;
+   color: black;
+}
+
+/* visited link */
+.fixed-nav-bar ul li a:visited {
+    text-decoration: none;
+    color: black;
+}  
+
+/*.fixed-nav-bar a:hover {
+    color: #F90;
+    background-color: #FFF;
+}*/
+
+li {
+  margin-top: 100px;
+}
+
+header {
+  margin-bottom: 500px
+}
+.main-bottom {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -200px 0 0 -480px !important;
+  width: 960px;
+  height: 350px;
+  padding: 0;
+
+}
+
+.date {
+    font-size: 11px;
+  font-family: Georgia, serif;
+  
+  margin: 0px 20px 30px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.article-deck-one  {
+  font-family: "Montserrat";
+  padding-top: 225px;
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: .25em;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+   }
+
+.article-deck  {
+  font-family: "Montserrat";
+color: #bebebe;
+  margin: 0;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: .25em;
+ 
+  text-align: center;
+   }
+
+
+.byline {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+
+.centeredContent {
+  margin: 0 auto 16px;
+  width: 60em;
+  max-width: 990px;
+}
+
+.centeredContentEight {
+  margin: 0 16.9% 0 16.9%;
+}
+
+
+
+.special-graf {
+  margin: 0 auto; width: 70%; 
+}
+
+.special-graf p {
+  font-size:  16px;
+  line-height: 22px;
+
+}
+
+.special-graf-one p, blockquote {
+  margin: 20px auto; width: 50%; 
+
+}
+h2 {
+   margin-left: auto;
+    margin-right: auto;
+    width: 245px;
+}
+
+
+.chapter-title {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+   margin: 30px auto 20px auto; width: 50%;
+}
+
+.special-5 {
+  margin-left: 30px;
+}
+
+.chapter-num {
+  font-size: 16px;
+  text-align: center;
+ }
+/*.aside-photo {
+  height: 340px;
+  margin-top: 20px[]
+}*/
+.column column-4 {
+  margin-left: 50px;
+}
+.special-chapter {
+    margin-left: auto;
+  margin-right: auto;
+  width: 285px;
+}
+/*.special-pq {
+   max-width: 60%;
+        float: left;
+        margin-right: 1em;
+}
+*/
+/*.publish {
+	color: #999999;
+	font-size: 12px;
+	margin-top: 5px;
+	text-transform: uppercase;
+	 /* border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}*/
+
+
+.start-quote {
+margin: 20px 0 0 -50px;
+/*display: inline-block;*/
+
+}
+
+.start-quote p {
+  color: #bebebe;
+  width: 350px;
+  text-align: right;
+  margin-top: 100px;
+
+}
+
+.citation {
+ width:350px; 
+ display:block; 
+ text-align:right;
+ color: black;
+ margin-top: 10px;
+
+}    
+/*
+element.style {
+width: 350px;
+display: block;
+text-align: right;
+}
+
+*/
+
+.special2 {
+
+width: 100%;
+
+}
+
+.special2-image img {
+
+max-width: 100%; /*  */
+height: auto;
+}
+
+.special2-image {
+width: 30%;
+float: left;
+}
+
+
+.special2-text {
+  width: 70%;
+  float: left;
+}
+
+.special {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+
+.dropcap {
+   font-family: georgia, serif;
+    float: left;
+    font-size: 80px;
+    line-height: 40px;
+    padding: 12px 15px 12px 0;
+    font-weight: 400;
+		}
+
+/* margin-right: 0.05em;
+	line-height: 30.0000610351563px;
+	font-size: 28px;
+  font-weight: normal
+  height: 30px; */
+
+.caps {
+   font-family:'Montserrat', sans-serif;
+   
+	text-transform: uppercase;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.pullquote {
+	   letter-spacing: -0.01em;
+	  font-size: 1.5rem;
+	font-weight: bold;
+ 	line-height: 1.05556;
+ border-top: 10px solid #000;
+ border-bottom: 1px solid #000;
+		margin: 40px 0;
+		 padding: 25px 0 20px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+
+footer {
+  font-size: 20px;
+}
+
+.caption {
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+
+}
+
+ .caption-more { 
+ 	color: rgb(204, 204, 204);
+ 	font-size: 11px;
+ 	text-transform: uppercase;
+}
+
+
+/*.image-container {
+  width: 100%;
+  /*height: 100%;*/
+/*  height: auto;
+  top: 0;
+  left: 0;
+  margin: 0 auto 30px auto;
+  line-height: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}*/
+*/
+
+.style-caption {
+  font-size: 14px;
+  color: #555;
+  font-weight: 300;
+  line-height: 18px;
+  margin-top: 9px;
+}
+
+
+.credit, footer {
+ color: #999;
+}
+
+/*footer .endnotes {
+  color: red;
+  margin: 20px 0 20px 0;
+}
+
+footer p {
+	font-size: 12px;
+}*/
+
+/* desktop down is min width ?*/
+  /* .container {
+    width: 200px;
+    height: 120px;
+}
+
+/* resize images 
+.container img {
+    width: 100%;
+    height: auto; */
+/*p { margin-right: 16em; }
+span { visibility: hidden; position: fixed; width: 12em; border: 1px solid #000; background: #dd0; padding: 1em; top: 1em; right: 1em; }
+a.footnote:focus + span { visibility: visible; }
+
+
+
+
+/* media queries */
+
+
+/* if it goes below 560 do this */
+/*@media only screen and (max-width: 550px) {
+    .column-1, 
+    .column-2, 
+    .column-3, 
+    .column-4, 
+    .column-5, 
+    .column-6, 
+    .column-7, 
+    .column-8, 
+    .column-9, 
+    .column-10, 
+    .column-11, 
+    .column-12 {
+        width: auto;
+        float: none;
+    }
+  
+    .row {
+        margin-bottom: 0;
+    }
+    .column {
+        margin-bottom: 10px;
+    }
+    .row:last-child .column:last-child {
+        margin-bottom: 0;
+    }
+
+  
+}*/ /* end of media query */
